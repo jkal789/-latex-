@@ -1,0 +1,297 @@
+%-------------------------
+% Resume in Latex
+% Author: Sang Peng
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setmainfont{Times New Roman} % 设置英文字体
+\setCJKmainfont{Noto Serif CJK SC} % 设置中文字体
+\usepackage{latexsym}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{float}
+\setlength{\footskip}{4.08003pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=1cm, right=1.4cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\footskip}{4.08003pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        {#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{桑鹏} % Your Name
+\newcommand{\course}{河南大学（双一流）} % Your Program
+%\newcommand{\roll}{xxxxxxx} % Your Roll No.
+\newcommand{\phone}{18242042309} % Your Phone Number
+\newcommand{\emailb}{sphenu@henu.edu.cn} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.6cm}{%
+\includegraphics[width=2.35cm,clip]{SLIET_Logo.png}
+}
+\parbox{\dimexpr\linewidth-2.9cm\relax}{
+
+\begin{tabularx}{\linewidth}{L L} \\
+   \textbf{\Large \name } & {\raisebox{0.0\height}{\footnotesize \fa}\ {}} \\ \\
+   { {男} {汉族} {1998.01}}& {\raisebox{0.0\height}{\footnotesize \faGlobe}\ {CET-6}} \\
+ % {Roll No.: \roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  \course & {\raisebox{0.0\height}{\footnotesize \faPhone}\ \phone}   \\
+  {软件工程学术硕士} & \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\ 
+  {应用密码学方向} & \href{https://orcid.org/0000-0003-0484-5839}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {orcid.org/0000-0003-0484-5839}}
+\end{tabularx}
+}
+
+
+%-----------Technical skills-----------------
+\section{\textbf{研究方向}}
+ \begin{itemize}[leftmargin=0.1in, label={}]
+    \small{\item{
+     \textbf{时控加密，同态加密，电子投票，抗量子加密} \\ 
+     \item {主要致力于以同态加密、时控性加密为主，多种安全手段为辅，为电子投票领域现有的私钥保存、选民匿名性、选举结果可验证性、可验证性与隐私性的冲突、抗强制条件下的可验证性、去中心化的灵活性等问题提供高效安全的解决方案。} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+%-----------EDUCATION-----------
+%\section{\textbf{Education}}
+ % \resumeSubHeadingListStart
+ %   \resumeSubheading
+ %     {}{CGPA/Percentage: xxx}
+%      {Your Degree and Course name}{Year}
+%    \resumeSubheading
+%      {Your School name}{CGPA/Percentage: xxx}
+%      {Board of Secondary Education, State}{Year}
+%  \resumeSubHeadingListEnd
+%\vspace{-5.5mm}
+%
+
+
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{研究内容}}
+\resumeSubHeadingListStart
+
+      \resumeItemListStart
+        \item {将Paillier同态加密、RSA签名、Elgamal加密等算法应用于电子投票方案，实现自计数、去中心化、高效计算的同时确保选民及其选票的安全隐私。} \\
+        \item {在Paillier同态加密电子投票方案的基础上，通过基于RSA和NTRU的三层认证协议，解决选票传输过程中的安全问题；采用安全可重构的秘密共享技术，规避外部操纵或非法拉票等安全风险。} \\
+        \item {引入时间控制算法加密Paillier私钥以控制开票时间；通过零知识证明方法实现密文状态下对选票合法性的验证；引入微服务思想将系统细化为独立运行的微服务接口以实现安全隐私的去中心化；通过定义安全博弈的方式形式化分析选票密文的语义安全性。} \\
+        \item {提出时控性同态加密算法，实现时间控制加密与同态加密的有机结合；引入盲化因子同区块链技术结合，实现抗强制条件下的可验证性与隐私性的平衡。}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{科研成果}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {袁科，\textbf{桑鹏}，张素雅，陈曦，贾春福}{}
+      {An Electronic Voting Scheme Based on Homomorphic Encryption and Decentralization}{学生一作}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {PeerJ Computer Science | 已发表 | 中科院四区}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+
+    \resumeSubheading
+      {袁科，\textbf{桑鹏}，时英志，王博震，贾春福}{}
+      {An Electronic Voting Scheme Based on Homomorphic Encryption and Secure Reconfigurable Secret Sharing}{学生一作}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Complex \& Intelligent Systems | 待投稿 | 中科院二区}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+    
+    \resumeSubheading
+      {袁科，\textbf{桑鹏}，葛健，周炳材，贾春福}{}
+      {A Timed-Release E-Voting Scheme Based on Paillier Homomorphic Encryption}{学生一作}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {IEEE Transactions on Sustainable Computing | 已录用 | 投稿时中科院二区}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+
+        \resumeSubheading
+      {袁科，\textbf{桑鹏}，李夷桐，时英志，贾春福}{}
+      {A Coercion-Resistant Blockchain Voting Scheme Based on Timed-Release Homomorphic Encryption}{学生一作}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {IEEE Transactions on Information Forensics and Security | 待投稿 | 中科院一区}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+%-----------Achievements-----------------
+%\section{\textbf{科研成果}}
+%\vspace{-0.4mm}
+%\resumeSubHeadingListStart
+%\resumePOR{Achievement } % Award
+%    {description} % Event
+%    {Event dates} %Event Year
+    
+%\resumePOR{Achievement } % Award
+%    {description} % Event
+%    {Event dates} %Event Year
+%\resumeSubHeadingListEnd
+%\vspace{-5mm}
+
+
+
+%-----------Positions of Responsibility-----------------
+\section{\textbf{项目经历}}
+
+\resumeSubHeadingListStart
+\resumePOR{基于编码的抗量子公钥密码安全性评估} % Position
+    {} %Club,Event
+    {2022.05 - 至今} %Tenure Period
+    
+      \resumeItemListStart
+        \item {针对基于编码的抗量子公钥密码算法解密失败率的问题，在前期开发的参数（比特）推荐系统开发基础上，增加对安全可用参数的推荐，辅助用户对指定明文进行安全加解密。}\\
+        \item {开展基于人工智能的抗量子公钥密码非安全参数加密密文识别预演工作——基于集成学习的密码算法多层复合识别研究。}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+
+
+
+
+
+%-------------------------------------------
+\end{document}
